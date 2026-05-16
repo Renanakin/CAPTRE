@@ -650,3 +650,34 @@ Asignacion experta:
 3. Fase 11
 4. Fase 12
 5. Fase 13
+
+## Fase 14 - Front AAA y consola productiva (Inicio 2026-05-16)
+Objetivo: elevar el frontend desde SPA operativa a consola productiva AAA para operacion comercial.
+
+Estado: EN PROGRESO (primer corte completado 2026-05-16)
+
+Avance implementado:
+- App shell enterprise en `apps/front` con sidebar, topbar, breadcrumb, busqueda, usuario, rol y empresa activa.
+- Login real contra API V1 con access/refresh token y modo demo de validacion visual.
+- RBAC visual por rol (`admin`, `contador`, `ejecutivo`, `auditor`).
+- Dashboard operacional con KPIs, pipeline documental, riesgos y actividad reciente.
+- Centro documental con filtros, detalle, export CSV y reprocesamiento.
+- Carga documental avanzada con drag & drop, multiples archivos, validacion y cola por archivo.
+- Revision inteligente con cola, detalle, approve/reject y overrides.
+- Rendition Studio con wizard visual, preview, generacion por filtro, historial y descarga autenticada.
+- Auditoria local de acciones y panel de observabilidad con health/liveness/readiness.
+
+Documentacion de avance:
+- Roadmap y mockups: `docs/ROADMAP_FRONT_AAA_CAPTRE.md`.
+- Detalle operativo del front: `apps/front/README.md`.
+
+Evidencia tecnica esperada por iteracion:
+- `node --check apps/front/app.js`
+- `git diff --check`
+- `pnpm run front:dev` para validacion manual en `http://127.0.0.1:5173`.
+
+Pendientes principales:
+- Validacion visual por usuario/proyecto.
+- Migracion aprobada a Vite + React + TypeScript.
+- Suite Playwright formal.
+- Endpoints API de listado persistente de documentos y rendiciones si se requiere operacion multiusuario real.
