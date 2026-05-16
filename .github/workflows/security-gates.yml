@@ -1,0 +1,36 @@
+name: security-gates
+
+on:
+  pull_request:
+  push:
+    branches: [ main, master ]
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install API dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r apps/api/requirements.txt
+
+      - name: Install security tooling
+        run: |
+          python -m pip install bandit pip-audit
+
+      - name: Run unit API security regression
+        run: |
+          cd apps/api
+          python -m pytest ../../tests/unit/test_auth_api.py ../../tests/unit/test_documents_api.py -q
+
+      - name: Run security gate
+        run: |
+          python scripts/security_gate.py

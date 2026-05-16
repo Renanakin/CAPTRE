@@ -1,0 +1,225 @@
+{
+  "timestamp": "2026-05-16T01:05:04.633989",
+  "dataset_dir": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia",
+  "totals": {
+    "all_files": 44,
+    "supported_files": 44,
+    "unsupported_files": 0,
+    "processed_ok": 44,
+    "duplicates": 44
+  },
+  "metrics": {
+    "output_generated_rate": 1.0,
+    "review_rate": 0.0,
+    "chile_precision_proxy": 0.9895,
+    "international_precision_proxy": 1.0
+  },
+  "decision": {
+    "go": true,
+    "no_go_reasons": [],
+    "note": "Precision reportada como proxy de completitud por falta de ground truth etiquetado."
+  },
+  "errors": [],
+  "sample": [
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\150044951_33_0053880422.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "CL",
+      "document_type": "invoice",
+      "confidence": 0.9600000000000001,
+      "critical_fields": "4/5",
+      "warnings": 2
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\9c57c875-f44a-4efd-bcc9-5a2732c84cbf.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "CL",
+      "document_type": "receipt",
+      "confidence": 0.91,
+      "critical_fields": "5/5",
+      "warnings": 1
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\DTE_76264675_T39F39344.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "CL",
+      "document_type": "receipt",
+      "confidence": 0.9700000000000001,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\Factura 423 Viñales .eml",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "unknown",
+      "document_type": "invoice",
+      "confidence": 0.897,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\Invoice-81607F7C-0023.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "CL",
+      "document_type": "invoice",
+      "confidence": 0.9500000000000001,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\gemini\\Gmail - El recibo de tu pedido de Google Play del 13 abr 2026.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "INTL",
+      "document_type": "receipt",
+      "confidence": 0.9,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\gemini\\Gmail - El recibo de tu pedido de Google Play del 13 dic 2025.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "INTL",
+      "document_type": "receipt",
+      "confidence": 0.9,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\gemini\\Gmail - El recibo de tu pedido de Google Play del 13 ene 2026.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "INTL",
+      "document_type": "receipt",
+      "confidence": 0.9,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\gemini\\Gmail - El recibo de tu pedido de Google Play del 13 feb 2026.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "INTL",
+      "document_type": "receipt",
+      "confidence": 0.9,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\gemini\\Gmail - El recibo de tu pedido de Google Play del 13 mar 2026.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "INTL",
+      "document_type": "receipt",
+      "confidence": 0.9,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\gemini\\Gmail - El recibo de tu pedido de Google Play del 13 sept 2025.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "INTL",
+      "document_type": "receipt",
+      "confidence": 0.9,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\gemini\\Gmail - El recibo de tu pedido de Google Play del 15 oct 2025.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "INTL",
+      "document_type": "receipt",
+      "confidence": 0.9,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\gemini\\Gmail - El recibo de tu pedido de Google Play del 20 dic 2025.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "INTL",
+      "document_type": "receipt",
+      "confidence": 0.9,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\gemini\\Gmail - El recibo de tu pedido de Google Play del 20 ene 2026.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "INTL",
+      "document_type": "receipt",
+      "confidence": 0.9,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\gemini\\Gmail - El recibo de tu pedido de Google Play del 20 nov 2025.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "INTL",
+      "document_type": "receipt",
+      "confidence": 0.9,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\gemini\\Gmail - El recibo de tu pedido de Google Play del 23 feb 2026.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "INTL",
+      "document_type": "receipt",
+      "confidence": 0.9,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\gemini\\Gmail - El recibo de tu pedido de Google Play del 23 mar 2026.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "INTL",
+      "document_type": "receipt",
+      "confidence": 0.9,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\gemini\\Gmail - Se usó una forma de pago alternativa el 13 nov 2025 para YouTube _ Tu recibo de pedido de Google Play.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "INTL",
+      "document_type": "receipt",
+      "confidence": 0.9,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\github-copilot\\INV109544171.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "INTL",
+      "document_type": "receipt",
+      "confidence": 0.9,
+      "critical_fields": "5/5",
+      "warnings": 0
+    },
+    {
+      "file": "G:\\PROYECTOS\\capturador_datos_v2\\facturas pagos ia\\github-copilot\\INV113711617.pdf",
+      "status": "COMPLETED",
+      "review_required": false,
+      "country_code": "INTL",
+      "document_type": "receipt",
+      "confidence": 0.9,
+      "critical_fields": "5/5",
+      "warnings": 0
+    }
+  ]
+}

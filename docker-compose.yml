@@ -1,0 +1,73 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.api
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://postgres:postgres@db:5432/capturador
+      REDIS_URL: redis://redis:6379/0
+      REDIS_QUEUE_NAME: document-processing
+      BACK_CODE_PATH: /opt/back
+      OLLAMA_ENABLED: "true"
+      OLLAMA_API: http://kernelia-ollama:11434/api
+      OLLAMA_MODEL: llama3.1:8b
+      OLLAMA_TIMEOUT_SECONDS: 30
+      OLLAMA_RETRY_COUNT: 2
+      OLLAMA_BACKOFF_SECONDS: 0.5
+      OLLAMA_REQUIRE_MODEL_AVAILABLE: "true"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - redis
+
+  worker:
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.worker
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://postgres:postgres@db:5432/capturador
+      REDIS_URL: redis://redis:6379/0
+      REDIS_QUEUE_NAME: document-processing
+      API_CODE_PATH: /opt/api
+      BACK_CODE_PATH: /opt/back
+      OLLAMA_ENABLED: "true"
+      OLLAMA_API: http://kernelia-ollama:11434/api
+      OLLAMA_MODEL: llama3.1:8b
+      OLLAMA_TIMEOUT_SECONDS: 30
+      OLLAMA_RETRY_COUNT: 2
+      OLLAMA_BACKOFF_SECONDS: 0.5
+      OLLAMA_REQUIRE_MODEL_AVAILABLE: "true"
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: capturador
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: kernelia-ollama
+    ports:
+      - "11434:11434"
+    environment:
+      OLLAMA_HOST: 0.0.0.0:11434
+    volumes:
+      - ./data/ollama:/root/.ollama

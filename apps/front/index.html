@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Capturador V2 | Operaciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <main class="app-shell" id="appShell">
+      <section class="screen" id="loginScreen">
+        <div class="card login-card">
+          <h1>Capturador V2</h1>
+          <p class="subtitle">Operacion documental contable</p>
+          <form id="loginForm" class="stack">
+            <label>Usuario
+              <input type="text" id="loginUser" placeholder="contabilidad@empresa.cl" required />
+            </label>
+            <label>Empresa
+              <input type="text" id="loginTenant" placeholder="acme" required />
+            </label>
+            <button type="submit">Entrar al panel</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="screen hidden" id="appScreen">
+        <header class="topbar card">
+          <div>
+            <h2>Panel Operativo</h2>
+            <p id="sessionBadge" class="mono"></p>
+          </div>
+          <button id="refreshAllBtn" class="secondary">Actualizar</button>
+        </header>
+
+        <nav class="tabbar card" id="tabBar">
+          <button data-tab="dashboard" class="tab active">Dashboard</button>
+          <button data-tab="upload" class="tab">Carga</button>
+          <button data-tab="documents" class="tab">Documentos</button>
+          <button data-tab="reviews" class="tab">Revision</button>
+          <button data-tab="renditions" class="tab">Rendiciones</button>
+        </nav>
+
+        <section class="panel-grid">
+          <article class="panel card tab-panel" data-panel="dashboard">
+            <h3>Indicadores</h3>
+            <div class="kpi-grid" id="kpiGrid"></div>
+            <h4>Ultimos documentos</h4>
+            <div id="dashboardDocs"></div>
+          </article>
+
+          <article class="panel card tab-panel hidden" data-panel="upload">
+            <h3>Carga documental</h3>
+            <form id="uploadForm" class="stack">
+              <label>Archivo
+                <input type="file" id="uploadFile" accept="application/pdf,image/png,image/jpeg" required />
+              </label>
+              <label>Responsable
+                <input type="text" id="uploadResponsible" placeholder="Ana" />
+              </label>
+              <label>Periodo (YYYY-MM)
+                <input type="text" id="uploadPeriod" placeholder="2026-05" />
+              </label>
+              <label>Centro de costo
+                <input type="text" id="uploadCenterCost" placeholder="FINANZAS" />
+              </label>
+              <button type="submit">Subir documento</button>
+            </form>
+            <pre id="uploadResult" class="mono output"></pre>
+          </article>
+
+          <article class="panel card tab-panel hidden" data-panel="documents">
+            <h3>Listado y detalle</h3>
+            <div class="row">
+              <button id="loadDocumentsBtn" class="secondary">Cargar listado</button>
+            </div>
+            <div id="documentsList"></div>
+            <h4>Detalle documento</h4>
+            <pre id="documentDetail" class="mono output"></pre>
+          </article>
+
+          <article class="panel card tab-panel hidden" data-panel="reviews">
+            <h3>Bandeja de revision</h3>
+            <button id="loadReviewsBtn" class="secondary">Cargar pendientes</button>
+            <div id="reviewsList"></div>
+            <h4>Accion rapida</h4>
+            <form id="reviewActionForm" class="stack two-col">
+              <label>Document ID
+                <input type="text" id="reviewDocId" required />
+              </label>
+              <label>Reviewer
+                <input type="text" id="reviewerId" value="reviewer-ui" required />
+              </label>
+              <label>Decision
+                <select id="reviewDecision">
+                  <option value="approve">Approve</option>
+                  <option value="reject">Reject</option>
+                </select>
+              </label>
+              <label>Motivo
+                <input type="text" id="reviewReason" value="Validado desde UI" required />
+              </label>
+              <button type="submit">Resolver revision</button>
+            </form>
+            <pre id="reviewResult" class="mono output"></pre>
+          </article>
+
+          <article class="panel card tab-panel hidden" data-panel="renditions">
+            <h3>Rendiciones e historial</h3>
+            <form id="renditionForm" class="stack two-col">
+              <label>Periodo
+                <input type="text" id="renditionPeriod" placeholder="2026-05" required />
+              </label>
+              <label>Responsable
+                <input type="text" id="renditionResponsible" placeholder="Ana" />
+              </label>
+              <label>Centro de costo
+                <input type="text" id="renditionCenterCost" placeholder="FINANZAS" />
+              </label>
+              <button type="submit">Generar por filtro</button>
+            </form>
+            <div id="renditionsHistory"></div>
+            <pre id="renditionResult" class="mono output"></pre>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

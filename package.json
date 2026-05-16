@@ -1,0 +1,24 @@
+{
+  "name": "capturador-datos-v2",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Orquestador de comandos del proyecto via pnpm",
+  "scripts": {
+    "deps:install": "python -m pip install -r apps\\api\\requirements.txt",
+    "front:dev": "cd apps\\front && pnpm run dev",
+    "front:start": "cd apps\\front && pnpm run start",
+    "api:dev": "cd apps\\api && python -m uvicorn app.main:app --host 127.0.0.1 --port 8000",
+    "worker:dev": "cd apps\\worker && python app\\main.py",
+    "db:migrate": "pnpm run deps:install && python scripts\\run_alembic.py -c alembic.ini upgrade head",
+    "db:revision": "python scripts\\run_alembic.py -c alembic.ini revision --autogenerate -m \"update schema\"",
+    "test:unit": "pnpm run test:unit:api && pnpm run test:unit:worker && pnpm run test:unit:back",
+    "test:unit:api": "cd apps\\api && python -m pytest ..\\..\\tests\\unit\\test_documents_api.py ..\\..\\tests\\unit\\test_auth_api.py -q",
+    "test:unit:worker": "python -m pytest tests\\unit\\test_worker_main.py -q",
+    "test:unit:back": "python -m pytest tests\\unit\\test_back_ocr_pipeline.py tests\\unit\\test_back_intelligent_extraction.py tests\\unit\\test_back_ollama_adapter.py -q",
+    "test:security:matrix": "cd apps\\api && python -m pytest ..\\..\\tests\\unit\\test_auth_api.py ..\\..\\tests\\unit\\test_documents_api.py -q",
+    "test:security:gate": "python scripts\\security_gate.py",
+    "test:integration:health": "python scripts\\run_integration_health.py",
+    "test:all": "pnpm run test:unit && pnpm run test:integration:health",
+    "qa:real-go-nogo": "python scripts\\run_real_docs_go_nogo.py"
+  }
+}

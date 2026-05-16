@@ -1,0 +1,10 @@
+﻿FROM python:3.12-slim
+WORKDIR /app
+COPY apps/api/requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+COPY apps/worker /app
+COPY apps/api /opt/api
+COPY apps/back /opt/back
+ENV API_CODE_PATH=/opt/api
+ENV BACK_CODE_PATH=/opt/back
+CMD ["python", "app/main.py"]

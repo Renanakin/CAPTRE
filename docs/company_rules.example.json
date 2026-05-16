@@ -1,0 +1,24 @@
+{
+  "default": {
+    "min_confidence_auto_approve": 0.75,
+    "prefer_ai_for_international": true,
+    "force_review_document_types": [],
+    "required_fields_by_country": {
+      "CL": ["supplier_name", "supplier_tax_id", "document_number", "issue_date", "total"],
+      "INTL": ["supplier_name", "document_number", "issue_date", "total"]
+    },
+    "allowed_currencies_by_country": {
+      "CL": ["CLP", "USD"],
+      "INTL": ["USD", "EUR", "CLP"]
+    }
+  },
+  "tenants": {
+    "real-go-nogo": {
+      "min_confidence_auto_approve": 0.7,
+      "prefer_ai_for_international": true,
+      "force_review_document_types": [
+        "credit_note"
+      ]
+    }
+  }
+}

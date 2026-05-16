@@ -1,0 +1,42 @@
+# Node
+node_modules/
+.pnpm-store/
+apps/front/node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+.mypy_cache/
+.ruff_cache/
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Build/cache artifacts
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local data/runtime folders
+/data/
+/tmp/
+
+# Runtime databases and generated artifacts
+*.db
+*.sqlite
+*.sqlite3
+apps/api/*.db
+tests/integration/*.db
+tests/integration/exports/
+tests/integration/uploads/
+
+# Local document datasets (keep outside git)
+facturas pagos ia/
