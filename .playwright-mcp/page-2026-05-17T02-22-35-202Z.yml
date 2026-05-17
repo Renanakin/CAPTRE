@@ -1,0 +1,117 @@
+- main [ref=e2]:
+  - generic [ref=e31]:
+    - complementary [ref=e32]:
+      - img "RendiFlow IA by HACKTECK" [ref=e34]
+      - navigation "Navegacion principal" [ref=e35]:
+        - button "Dashboard" [ref=e36] [cursor=pointer]
+        - button "Documentos" [ref=e37] [cursor=pointer]
+        - button "Carga documental" [ref=e38] [cursor=pointer]
+        - button "Revision inteligente" [ref=e39] [cursor=pointer]
+        - button "Rendition Studio" [ref=e40] [cursor=pointer]
+        - button "Auditoria" [ref=e41] [cursor=pointer]
+        - button "Observabilidad" [ref=e42] [cursor=pointer]
+      - generic [ref=e45]: Sesion protegida
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - paragraph [ref=e49]: Inicio / Dashboard
+          - heading "Dashboard operacional" [level=2] [ref=e50]
+        - searchbox "Buscar documento, proveedor, rendicion..." [ref=e52]
+        - generic [ref=e53]:
+          - generic [ref=e54]: contador
+          - generic [ref=e55]:
+            - strong [ref=e56]: demo@captre.local
+            - generic [ref=e57]: demo-company
+        - button "Actualizar" [ref=e58] [cursor=pointer]
+        - button "Salir" [ref=e59] [cursor=pointer]
+      - generic [ref=e61]: Modo demo activado
+      - generic [ref=e63]:
+        - article [ref=e64]:
+          - text: Cargados
+          - strong [ref=e65]: "3"
+          - emphasis [ref=e66]: documentos capturados
+        - article [ref=e67]:
+          - text: Procesados
+          - strong [ref=e68]: "1"
+          - emphasis [ref=e69]: OCR/IA finalizado
+        - article [ref=e70]:
+          - text: En revision
+          - strong [ref=e71]: "0"
+          - emphasis [ref=e72]: requieren decision
+        - article [ref=e73]:
+          - text: Rendiciones
+          - strong [ref=e74]: "2"
+          - emphasis [ref=e75]: generadas en sesion
+        - article [ref=e76]:
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - paragraph [ref=e79]: Flujo documental
+              - heading "Pipeline operacional" [level=3] [ref=e80]
+            - generic [ref=e81]: Periodo activo
+          - generic [ref=e82]:
+            - generic [ref=e83]:
+              - generic [ref=e84]: Recibido
+              - strong [ref=e87]: "3"
+            - generic [ref=e88]:
+              - generic [ref=e89]: OCR/IA
+              - strong [ref=e92]: "1"
+            - generic [ref=e93]:
+              - generic [ref=e94]: Revision
+              - strong [ref=e96]: "0"
+            - generic [ref=e97]:
+              - generic [ref=e98]: Aprobado
+              - strong [ref=e101]: "1"
+        - article [ref=e102]:
+          - generic [ref=e104]:
+            - paragraph [ref=e105]: Riesgos
+            - heading "Alertas criticas" [level=3] [ref=e106]
+          - generic [ref=e107]:
+            - generic [ref=e108]: 1 documentos con baja confianza
+            - generic [ref=e110]: 0 revisiones pendientes
+            - generic [ref=e112]: readiness pendiente
+        - article [ref=e114]:
+          - generic [ref=e115]:
+            - generic [ref=e116]:
+              - paragraph [ref=e117]: Actividad reciente
+              - heading "Ultimos documentos" [level=3] [ref=e118]
+            - button "Ver centro documental" [ref=e119] [cursor=pointer]
+          - table [ref=e121]:
+            - rowgroup [ref=e122]:
+              - row "ID Proveedor Total Confianza Estado Accion" [ref=e123]:
+                - columnheader "ID" [ref=e124]
+                - columnheader "Proveedor" [ref=e125]
+                - columnheader "Total" [ref=e126]
+                - columnheader "Confianza" [ref=e127]
+                - columnheader "Estado" [ref=e128]
+                - columnheader "Accion" [ref=e129]
+            - rowgroup [ref=e130]:
+              - row "DOC-901 ACME Ltda $980.000 CLP 72% REVIEW_REQUIRED Abrir" [ref=e131]:
+                - cell "DOC-901" [ref=e132]
+                - cell "ACME Ltda" [ref=e133]
+                - cell "$980.000 CLP" [ref=e134]
+                - cell "72%" [ref=e135]:
+                  - generic [ref=e136]: 72%
+                - cell "REVIEW_REQUIRED" [ref=e137]:
+                  - generic [ref=e138]: REVIEW_REQUIRED
+                - cell "Abrir" [ref=e139]:
+                  - button "Abrir" [ref=e140] [cursor=pointer]
+              - row "DOC-899 Global Inc USD 120 USD 81% WARNING Abrir" [ref=e141]:
+                - cell "DOC-899" [ref=e142]
+                - cell "Global Inc" [ref=e143]
+                - cell "USD 120 USD" [ref=e144]
+                - cell "81%" [ref=e145]:
+                  - generic [ref=e146]: 81%
+                - cell "WARNING" [ref=e147]:
+                  - generic [ref=e148]: WARNING
+                - cell "Abrir" [ref=e149]:
+                  - button "Abrir" [ref=e150] [cursor=pointer]
+              - row "DOC-870 Demo SpA $45.900 CLP 98% APPROVED Abrir" [ref=e151]:
+                - cell "DOC-870" [ref=e152]
+                - cell "Demo SpA" [ref=e153]
+                - cell "$45.900 CLP" [ref=e154]
+                - cell "98%" [ref=e155]:
+                  - generic [ref=e156]: 98%
+                - cell "APPROVED" [ref=e157]:
+                  - generic [ref=e158]: APPROVED
+                - cell "Abrir" [ref=e159]:
+                  - button "Abrir" [ref=e160] [cursor=pointer]
