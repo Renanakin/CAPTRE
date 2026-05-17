@@ -1,0 +1,44 @@
+- main [ref=e2]:
+  - generic [ref=e32]:
+    - complementary [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]: C
+        - generic [ref=e36]:
+          - strong [ref=e37]: CAPTRE
+          - generic [ref=e38]: Console AAA
+      - navigation "Navegacion principal" [ref=e39]:
+        - button "⌁ Dashboard" [ref=e40] [cursor=pointer]
+        - button "▣ Documentos" [ref=e41] [cursor=pointer]
+        - button "⇧ Carga documental" [ref=e42] [cursor=pointer]
+        - button "◇ Revision inteligente" [active] [ref=e43] [cursor=pointer]
+        - button "▤ Rendition Studio" [ref=e44] [cursor=pointer]
+        - button "◷ Auditoria" [ref=e45] [cursor=pointer]
+        - button "● Observabilidad" [ref=e46] [cursor=pointer]
+      - generic [ref=e49]: Sesion protegida
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - paragraph [ref=e53]: Revision / Inteligente
+          - heading "Revision inteligente" [level=2] [ref=e231]
+        - searchbox "Buscar documento, proveedor, rendicion..." [ref=e56]
+        - generic [ref=e57]:
+          - generic [ref=e58]: contador
+          - generic [ref=e59]:
+            - strong [ref=e60]: demo@captre.local
+            - generic [ref=e61]: demo-company
+        - button "Actualizar" [ref=e62] [cursor=pointer]
+        - button "Salir" [ref=e63] [cursor=pointer]
+      - generic [ref=e232]:
+        - article [ref=e233]:
+          - generic [ref=e234]:
+            - generic [ref=e235]:
+              - paragraph [ref=e236]: Revision inteligente
+              - heading "Cola priorizada" [level=3] [ref=e237]
+            - button "Recargar" [ref=e238] [cursor=pointer]
+          - generic [ref=e240]:
+            - strong [ref=e241]: Sin pendientes
+            - generic [ref=e242]: No hay documentos en revision.
+        - article [ref=e243]:
+          - generic [ref=e244]:
+            - strong [ref=e245]: Selecciona un documento
+            - generic [ref=e246]: Veras motivos, datos extraidos, overrides y acciones de decision.

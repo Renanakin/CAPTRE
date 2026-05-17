@@ -1,0 +1,102 @@
+- main [ref=e2]:
+  - generic [ref=e32]:
+    - complementary [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]: C
+        - generic [ref=e36]:
+          - strong [ref=e37]: CAPTRE
+          - generic [ref=e38]: Console AAA
+      - navigation "Navegacion principal" [ref=e39]:
+        - button "⌁ Dashboard" [ref=e40] [cursor=pointer]
+        - button "▣ Documentos" [active] [ref=e41] [cursor=pointer]
+        - button "⇧ Carga documental" [ref=e42] [cursor=pointer]
+        - button "◇ Revision inteligente" [ref=e43] [cursor=pointer]
+        - button "▤ Rendition Studio" [ref=e44] [cursor=pointer]
+        - button "◷ Auditoria" [ref=e45] [cursor=pointer]
+        - button "● Observabilidad" [ref=e46] [cursor=pointer]
+      - generic [ref=e49]: Sesion protegida
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - paragraph [ref=e53]: Documentos / Centro documental
+          - heading "Centro documental" [level=2] [ref=e166]
+        - searchbox "Buscar documento, proveedor, rendicion..." [ref=e56]
+        - generic [ref=e57]:
+          - generic [ref=e58]: contador
+          - generic [ref=e59]:
+            - strong [ref=e60]: demo@captre.local
+            - generic [ref=e61]: demo-company
+        - button "Actualizar" [ref=e62] [cursor=pointer]
+        - button "Salir" [ref=e63] [cursor=pointer]
+      - generic [ref=e167]:
+        - generic [ref=e168]:
+          - generic [ref=e169]:
+            - paragraph [ref=e170]: Centro documental
+            - heading "Gestion, busqueda y detalle" [level=3] [ref=e171]
+            - paragraph [ref=e172]: Tabla operativa con filtros locales y acciones de detalle/procesamiento.
+          - button "Carga documental" [ref=e174] [cursor=pointer]
+        - article [ref=e175]:
+          - generic [ref=e176]:
+            - searchbox "Buscar por ID, proveedor, estado..." [ref=e177]
+            - combobox [ref=e178]:
+              - option "Todos los estados" [selected]
+              - option "RECEIVED"
+              - option "PROCESSED"
+              - option "COMPLETED"
+              - option "REVIEW_REQUIRED"
+              - option "APPROVED"
+              - option "REJECTED"
+            - button "Export CSV" [ref=e179] [cursor=pointer]
+          - table [ref=e181]:
+            - rowgroup [ref=e182]:
+              - row "Archivo Proveedor Fecha Total Conf. Estado Acciones" [ref=e183]:
+                - columnheader "Archivo" [ref=e184]
+                - columnheader "Proveedor" [ref=e185]
+                - columnheader "Fecha" [ref=e186]
+                - columnheader "Total" [ref=e187]
+                - columnheader "Conf." [ref=e188]
+                - columnheader "Estado" [ref=e189]
+                - columnheader "Acciones" [ref=e190]
+            - rowgroup [ref=e191]:
+              - row "factura_901.pdf DOC-901 ACME Ltda 2026-05-16 $980.000 CLP 72% REVIEW_REQUIRED Ver Procesar" [ref=e192]:
+                - cell "factura_901.pdf DOC-901" [ref=e193]:
+                  - strong [ref=e194]: factura_901.pdf
+                  - text: DOC-901
+                - cell "ACME Ltda" [ref=e195]
+                - cell "2026-05-16" [ref=e196]
+                - cell "$980.000 CLP" [ref=e197]
+                - cell "72%" [ref=e198]:
+                  - generic [ref=e199]: 72%
+                - cell "REVIEW_REQUIRED" [ref=e200]:
+                  - generic [ref=e201]: REVIEW_REQUIRED
+                - cell "Ver Procesar" [ref=e202]:
+                  - button "Ver" [ref=e203] [cursor=pointer]
+                  - button "Procesar" [ref=e204] [cursor=pointer]
+              - row "invoice_global.pdf DOC-899 Global Inc 2026-05-15 USD 120 USD 81% WARNING Ver Procesar" [ref=e205]:
+                - cell "invoice_global.pdf DOC-899" [ref=e206]:
+                  - strong [ref=e207]: invoice_global.pdf
+                  - text: DOC-899
+                - cell "Global Inc" [ref=e208]
+                - cell "2026-05-15" [ref=e209]
+                - cell "USD 120 USD" [ref=e210]
+                - cell "81%" [ref=e211]:
+                  - generic [ref=e212]: 81%
+                - cell "WARNING" [ref=e213]:
+                  - generic [ref=e214]: WARNING
+                - cell "Ver Procesar" [ref=e215]:
+                  - button "Ver" [ref=e216] [cursor=pointer]
+                  - button "Procesar" [ref=e217] [cursor=pointer]
+              - row "boleta_870.jpg DOC-870 Demo SpA 2026-05-14 $45.900 CLP 98% APPROVED Ver Procesar" [ref=e218]:
+                - cell "boleta_870.jpg DOC-870" [ref=e219]:
+                  - strong [ref=e220]: boleta_870.jpg
+                  - text: DOC-870
+                - cell "Demo SpA" [ref=e221]
+                - cell "2026-05-14" [ref=e222]
+                - cell "$45.900 CLP" [ref=e223]
+                - cell "98%" [ref=e224]:
+                  - generic [ref=e225]: 98%
+                - cell "APPROVED" [ref=e226]:
+                  - generic [ref=e227]: APPROVED
+                - cell "Ver Procesar" [ref=e228]:
+                  - button "Ver" [ref=e229] [cursor=pointer]
+                  - button "Procesar" [ref=e230] [cursor=pointer]

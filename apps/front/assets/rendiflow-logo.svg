@@ -1,0 +1,80 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="260" y1="160" x2="760" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00B8B8"/>
+      <stop offset="0.45" stop-color="#246BFF"/>
+      <stop offset="1" stop-color="#6B2CFF"/>
+    </linearGradient>
+    <linearGradient id="gt" x1="120" y1="650" x2="900" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071947"/>
+      <stop offset="0.55" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#00AFA8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" rx="70" fill="#fff"/>
+  <g fill="url(#g)">
+    <rect x="250" y="285" width="58" height="10" rx="5"/>
+    <rect x="215" y="332" width="95" height="11" rx="5"/>
+    <rect x="246" y="379" width="75" height="10" rx="5"/>
+    <rect x="215" y="410" width="15" height="15" rx="3"/>
+    <rect x="290" y="310" width="14" height="14" rx="3"/>
+    <rect x="320" y="410" width="18" height="18" rx="4"/>
+    <rect x="255" y="448" width="16" height="16" rx="4"/>
+  </g>
+  <path d="M395 145H610L710 245V520C710 554 682 582 648 582H395C361 582 333 554 333 520V207C333 173 361 145 395 145Z" fill="white" stroke="url(#g)" stroke-width="15"/>
+  <path d="M610 147V223C610 237 621 248 635 248H708" fill="none" stroke="url(#g)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="385" y="280" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="700" fill="#071947">$</text>
+  <g stroke="#071947" stroke-width="9" stroke-linecap="round">
+    <line x1="500" y1="215" x2="560" y2="215"/>
+    <line x1="500" y1="255" x2="635" y2="255"/>
+    <line x1="390" y1="315" x2="640" y2="315"/>
+    <line x1="390" y1="365" x2="555" y2="365"/>
+  </g>
+  <g fill="#071947">
+    <circle cx="390" cy="430" r="5"/>
+    <circle cx="425" cy="430" r="5"/>
+    <circle cx="460" cy="430" r="5"/>
+    <circle cx="495" cy="430" r="5"/>
+    <circle cx="530" cy="430" r="5"/>
+    <circle cx="565" cy="430" r="5"/>
+    <circle cx="600" cy="430" r="5"/>
+  </g>
+  <g stroke="#071947" stroke-width="7" fill="none">
+    <rect x="390" y="465" width="150" height="88" rx="3"/>
+    <line x1="390" y1="495" x2="540" y2="495"/>
+    <line x1="390" y1="525" x2="540" y2="525"/>
+    <line x1="445" y1="465" x2="445" y2="553"/>
+  </g>
+  <circle cx="685" cy="475" r="82" fill="#fff" stroke="url(#g)" stroke-width="13"/>
+  <path d="M645 475L675 505L730 430" fill="none" stroke="url(#g)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="512" y="715" text-anchor="middle" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="88" font-weight="900" letter-spacing="2" fill="url(#gt)">RENDIFLOW</text>
+  <line x1="185" y1="768" x2="285" y2="768" stroke="url(#g)" stroke-width="3"/>
+  <text x="512" y="785" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="14" fill="#071947">BY HACKTECK</text>
+  <line x1="740" y1="768" x2="840" y2="768" stroke="url(#g)" stroke-width="3"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#071947" font-size="19" font-weight="700">
+    <text x="135" y="875">CAPTURA</text>
+    <text x="135" y="899">AUTOMÁTICA</text>
+    <text x="350" y="875">EXTRACCIÓN</text>
+    <text x="350" y="899">INTELIGENTE</text>
+    <text x="585" y="875">VALIDACIÓN</text>
+    <text x="585" y="899">CONTABLE</text>
+    <text x="810" y="875">RENDICIONES</text>
+    <text x="810" y="899">AUTOMÁTICAS</text>
+  </g>
+  <g stroke="url(#g)" stroke-width="5" fill="none">
+    <rect x="80" y="850" width="42" height="52" rx="5"/>
+    <text x="101" y="884" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#00AFA8" stroke="none">$</text>
+    <circle cx="315" cy="866" r="22"/>
+    <line x1="332" y1="882" x2="350" y2="902"/>
+    <path d="M535 850L560 858V880C560 895 548 904 535 910C522 904 510 895 510 880V858L535 850Z"/>
+    <path d="M523 880L533 890L550 867"/>
+    <rect x="760" y="880" width="12" height="30" fill="#00AFA8" stroke="none"/>
+    <rect x="782" y="860" width="12" height="50" fill="#246BFF" stroke="none"/>
+    <rect x="804" y="835" width="12" height="75" fill="#00AFA8" stroke="none"/>
+  </g>
+  <g stroke="#CBD5E1" stroke-width="2">
+    <line x1="300" y1="845" x2="300" y2="910"/>
+    <line x1="500" y1="845" x2="500" y2="910"/>
+    <line x1="745" y1="845" x2="745" y2="910"/>
+  </g>
+</svg>

@@ -1,0 +1,68 @@
+- main [ref=e2]:
+  - generic [ref=e32]:
+    - complementary [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]: C
+        - generic [ref=e36]:
+          - strong [ref=e37]: CAPTRE
+          - generic [ref=e38]: Console AAA
+      - navigation "Navegacion principal" [ref=e39]:
+        - button "⌁ Dashboard" [ref=e40] [cursor=pointer]
+        - button "▣ Documentos" [ref=e41] [cursor=pointer]
+        - button "⇧ Carga documental" [active] [ref=e42] [cursor=pointer]
+        - button "◇ Revision inteligente" [ref=e43] [cursor=pointer]
+        - button "▤ Rendition Studio" [ref=e44] [cursor=pointer]
+        - button "◷ Auditoria" [ref=e45] [cursor=pointer]
+        - button "● Observabilidad" [ref=e46] [cursor=pointer]
+      - generic [ref=e49]: Sesion protegida
+    - generic [ref=e50]:
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - paragraph [ref=e53]: Documentos / Carga
+          - heading "Carga documental avanzada" [level=2] [ref=e333]
+        - searchbox "Buscar documento, proveedor, rendicion..." [ref=e56]
+        - generic [ref=e57]:
+          - generic [ref=e58]: contador
+          - generic [ref=e59]:
+            - strong [ref=e60]: demo@captre.local
+            - generic [ref=e61]: demo-company
+        - button "Actualizar" [ref=e62] [cursor=pointer]
+        - button "Salir" [ref=e63] [cursor=pointer]
+      - generic [ref=e334]:
+        - article [ref=e335]:
+          - generic [ref=e336]:
+            - generic [ref=e337]:
+              - paragraph [ref=e338]: Carga documental avanzada
+              - heading "Ingreso con validacion previa" [level=3] [ref=e339]
+            - generic [ref=e340]: PDF · PNG · JPG
+          - generic [ref=e341]:
+            - generic [ref=e342] [cursor=pointer]:
+              - strong [ref=e343]: Arrastra documentos aqui
+              - generic [ref=e344]: o selecciona archivos para encolar y procesar
+            - generic [ref=e345]:
+              - generic [ref=e346]:
+                - text: Periodo
+                - textbox "Periodo" [ref=e347]
+              - generic [ref=e348]:
+                - text: Responsable
+                - textbox "Responsable" [ref=e349]:
+                  - /placeholder: Ana
+              - generic [ref=e350]:
+                - text: Centro de costo
+                - textbox "Centro de costo" [ref=e351]:
+                  - /placeholder: FINANZAS
+              - generic [ref=e352]:
+                - text: Tipo documento
+                - combobox "Tipo documento" [ref=e353]:
+                  - option "Gasto" [selected]
+                  - option "Factura"
+                  - option "Boleta"
+                  - option "Internacional"
+            - button "Subir cola" [ref=e354] [cursor=pointer]
+        - article [ref=e355]:
+          - generic [ref=e357]:
+            - paragraph [ref=e358]: Cola
+            - heading "Estado por archivo" [level=3] [ref=e359]
+          - generic [ref=e361]:
+            - strong [ref=e362]: Cola vacia
+            - generic [ref=e363]: Agrega PDF o imagenes para comenzar.

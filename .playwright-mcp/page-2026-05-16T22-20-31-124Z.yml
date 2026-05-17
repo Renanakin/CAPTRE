@@ -1,0 +1,40 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - paragraph [ref=e5]: FinOps Intelligence Console
+      - heading "CAPTRE" [level=1] [ref=e6]
+      - paragraph [ref=e7]: Captura, validacion, revision inteligente y rendicion contable con trazabilidad lista para produccion.
+      - generic [ref=e8]:
+        - generic [ref=e9]:
+          - strong [ref=e10]: OCR
+          - text: avanzado
+        - generic [ref=e11]:
+          - strong [ref=e12]: IA
+          - text: asistida
+        - generic [ref=e13]:
+          - strong [ref=e14]: RBAC
+          - text: multiempresa
+    - generic [ref=e15]:
+      - generic [ref=e16]:
+        - paragraph [ref=e17]: Acceso seguro
+        - heading "Entrar al panel" [level=2] [ref=e18]
+        - paragraph [ref=e19]: Usa credenciales API o activa modo demo si el backend no esta disponible.
+      - generic [ref=e20]:
+        - text: API base
+        - textbox "API base" [ref=e21]: http://127.0.0.1:8000/api/v1
+      - generic [ref=e22]:
+        - text: Usuario
+        - textbox "Usuario" [ref=e23]:
+          - /placeholder: contador@acme.cl
+      - generic [ref=e24]:
+        - text: Password
+        - textbox "Password" [ref=e25]:
+          - /placeholder: ••••••••••••
+      - generic [ref=e26]:
+        - text: Empresa / tenant fallback
+        - textbox "Empresa / tenant fallback" [ref=e27]:
+          - /placeholder: acme
+      - generic [ref=e28]:
+        - button "Entrar" [ref=e29] [cursor=pointer]
+        - button "Modo demo" [ref=e30] [cursor=pointer]
+      - status [ref=e31]

@@ -1,0 +1,39 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - img "RendiFlow IA by HACKTECK" [ref=e5]
+      - paragraph [ref=e6]: Automatizacion inteligente de documentos, gastos y rendiciones contables.
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - strong [ref=e9]: OCR
+          - text: avanzado
+        - generic [ref=e10]:
+          - strong [ref=e11]: IA
+          - text: asistida
+        - generic [ref=e12]:
+          - strong [ref=e13]: RBAC
+          - text: multiempresa
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - paragraph [ref=e16]: Acceso seguro
+        - heading "Entrar al panel" [level=2] [ref=e17]
+        - paragraph [ref=e18]: Usa credenciales API o activa modo demo si el backend no esta disponible.
+      - generic [ref=e19]:
+        - text: API base
+        - textbox "API base" [ref=e20]: http://127.0.0.1:8000/api/v1
+      - generic [ref=e21]:
+        - text: Usuario
+        - textbox "Usuario" [ref=e22]:
+          - /placeholder: contador@acme.cl
+      - generic [ref=e23]:
+        - text: Password
+        - textbox "Password" [ref=e24]:
+          - /placeholder: ••••••••••••
+      - generic [ref=e25]:
+        - text: Empresa / tenant fallback
+        - textbox "Empresa / tenant fallback" [ref=e26]:
+          - /placeholder: acme
+      - generic [ref=e27]:
+        - button "Entrar" [ref=e28] [cursor=pointer]
+        - button "Modo demo" [ref=e29] [cursor=pointer]
+      - status [ref=e30]

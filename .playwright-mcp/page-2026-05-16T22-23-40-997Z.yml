@@ -1,0 +1,103 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e5]:
+        - generic [ref=e6]: C
+        - generic [ref=e7]:
+          - strong [ref=e8]: CAPTRE
+          - generic [ref=e9]: Console AAA
+      - navigation "Navegacion principal" [ref=e10]:
+        - button "⌁ Dashboard" [ref=e11] [cursor=pointer]
+        - button "▣ Documentos" [ref=e12] [cursor=pointer]
+        - button "⇧ Carga documental" [ref=e13] [cursor=pointer]
+        - button "◇ Revision inteligente" [ref=e14] [cursor=pointer]
+        - button "▤ Rendition Studio" [ref=e15] [cursor=pointer]
+        - button "◷ Auditoria" [ref=e16] [cursor=pointer]
+        - button "● Observabilidad" [ref=e17] [cursor=pointer]
+      - generic [ref=e20]: Sesion protegida
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]:
+          - paragraph [ref=e24]: Rendiciones / Studio
+          - heading "Rendition Studio" [level=2] [ref=e134]
+        - searchbox "Buscar documento, proveedor, rendicion..." [ref=e27]
+        - generic [ref=e28]:
+          - generic [ref=e29]: contador
+          - generic [ref=e30]:
+            - strong [ref=e31]: demo@captre.local
+            - generic [ref=e32]: demo-company
+        - button "Actualizar" [ref=e33] [cursor=pointer]
+        - button "Salir" [ref=e34] [cursor=pointer]
+      - generic [ref=e198]: Rendicion local generada en modo demo
+      - generic [ref=e135]:
+        - article [ref=e136]:
+          - generic [ref=e137]:
+            - generic [ref=e138]:
+              - paragraph [ref=e139]: Rendition Studio
+              - heading "Wizard de generacion" [level=3] [ref=e140]
+            - generic [ref=e141]: Plantilla 01-rendicion-gastos-2025
+          - list [ref=e142]:
+            - listitem [ref=e143]: Periodo
+            - listitem [ref=e144]: Filtros
+            - listitem [ref=e145]: Preview
+            - listitem [ref=e146]: Validacion
+            - listitem [ref=e147]: Descarga
+          - generic [ref=e148]:
+            - generic [ref=e149]:
+              - text: Periodo
+              - textbox "Periodo" [ref=e150]: 2026-05
+            - generic [ref=e151]:
+              - text: Responsable
+              - textbox "Responsable" [ref=e152]:
+                - /placeholder: Opcional
+            - generic [ref=e153]:
+              - text: Centro costo
+              - textbox "Centro costo" [ref=e154]:
+                - /placeholder: Opcional
+            - button "Validar y generar" [active] [ref=e155] [cursor=pointer]
+          - table [ref=e158]:
+            - rowgroup [ref=e159]:
+              - row "Documento Proveedor Total Estado" [ref=e160]:
+                - columnheader "Documento" [ref=e161]
+                - columnheader "Proveedor" [ref=e162]
+                - columnheader "Total" [ref=e163]
+                - columnheader "Estado" [ref=e164]
+            - rowgroup [ref=e165]:
+              - row "DOC-870 Demo SpA $45.900 CLP APPROVED" [ref=e166]:
+                - cell "DOC-870" [ref=e167]
+                - cell "Demo SpA" [ref=e168]
+                - cell "$45.900 CLP" [ref=e169]
+                - cell "APPROVED" [ref=e170]:
+                  - generic [ref=e171]: APPROVED
+        - article [ref=e172]:
+          - generic [ref=e174]:
+            - paragraph [ref=e175]: Historial
+            - heading "Rendiciones generadas" [level=3] [ref=e176]
+          - table [ref=e199]:
+            - rowgroup [ref=e200]:
+              - row "ID Periodo Docs Warnings Estado Acciones" [ref=e201]:
+                - columnheader "ID" [ref=e202]
+                - columnheader "Periodo" [ref=e203]
+                - columnheader "Docs" [ref=e204]
+                - columnheader "Warnings" [ref=e205]
+                - columnheader "Estado" [ref=e206]
+                - columnheader "Acciones" [ref=e207]
+            - rowgroup [ref=e208]:
+              - row "local-2d16910e-71bf-4690-9743-fb200d255fd9 2026-05 - 0 LOCAL_PREVIEW Descargar" [ref=e209]:
+                - cell "local-2d16910e-71bf-4690-9743-fb200d255fd9" [ref=e210]
+                - cell "2026-05" [ref=e211]
+                - cell "-" [ref=e212]
+                - cell "0" [ref=e213]
+                - cell "LOCAL_PREVIEW" [ref=e214]:
+                  - generic [ref=e215]: LOCAL_PREVIEW
+                - cell "Descargar" [ref=e216]:
+                  - button "Descargar" [ref=e217] [cursor=pointer]
+              - row "local-ee0b2e9e-8b50-433b-a58f-7df49bab3238 2026-05 - 0 LOCAL_PREVIEW Descargar" [ref=e218]:
+                - cell "local-ee0b2e9e-8b50-433b-a58f-7df49bab3238" [ref=e219]
+                - cell "2026-05" [ref=e220]
+                - cell "-" [ref=e221]
+                - cell "0" [ref=e222]
+                - cell "LOCAL_PREVIEW" [ref=e223]:
+                  - generic [ref=e224]: LOCAL_PREVIEW
+                - cell "Descargar" [ref=e225]:
+                  - button "Descargar" [ref=e226] [cursor=pointer]

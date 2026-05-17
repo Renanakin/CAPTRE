@@ -1,0 +1,244 @@
+﻿diff --git a/apps/front/index.html b/apps/front/index.html
+index 18bbe0d..a0b7b21 100644
+--- a/apps/front/index.html
++++ b/apps/front/index.html
+@@ -1,136 +1,128 @@
+ <!doctype html>
++<html lang="es">
++<!doctype html>
+ <html lang="es">
+   <head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+-    <title>Capturador V2 | Operaciones</title>
++    <title>RendiFlow IA | Intelligence Console</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
++    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+     <link rel="stylesheet" href="./styles.css" />
++    <script src="https://unpkg.com/lucide@latest"></script>
+   </head>
+   <body>
+-    <div class="bg-orb orb-a"></div>
+-    <div class="bg-orb orb-b"></div>
++    <canvas id="bgCanvas" class="bg-canvas"></canvas>
+ 
+-    <main class="app-shell" id="appShell">
+-      <section class="screen" id="loginScreen">
+-        <div class="card login-card">
+-          <h1>Capturador V2</h1>
+-          <p class="subtitle">Operacion documental contable</p>
+-          <form id="loginForm" class="stack">
+-            <label>Usuario
+-              <input type="text" id="loginUser" placeholder="contabilidad@empresa.cl" required />
+-            </label>
+-            <label>Empresa
+-              <input type="text" id="loginTenant" placeholder="acme" required />
+-            </label>
+-            <button type="submit">Entrar al panel</button>
+-          </form>
++    <main id="root" class="root-shell">
++      <section id="loginScreen" class="login-screen">
++        <div class="login-hero">
++          <img class="hero-logo" src="./assets/rendiflow-logo.svg" alt="RendiFlow IA by HACKTECK" />
++          <p class="hero-copy">Automatizacion inteligente de documentos, gastos y rendiciones contables.</p>
++          <div class="hero-metrics">
++            <span><strong>OCR</strong> avanzado</span>
++            <span><strong>IA</strong> asistida</span>
++            <span><strong>RBAC</strong> multiempresa</span>
++          </div>
+         </div>
+-      </section>
+ 
+-      <section class="screen hidden" id="appScreen">
+-        <header class="topbar card">
++        <form id="loginForm" class="login-card glass-card">
+           <div>
+-            <h2>Panel Operativo</h2>
+-            <p id="sessionBadge" class="mono"></p>
++            <p class="eyebrow">Acceso seguro</p>
++            <h2>Entrar al panel</h2>
++            <p class="muted">Usa credenciales API o activa modo demo si el backend no esta disponible.</p>
+           </div>
+-          <button id="refreshAllBtn" class="secondary">Actualizar</button>
+-        </header>
+ 
+-        <nav class="tabbar card" id="tabBar">
+-          <button data-tab="dashboard" class="tab active">Dashboard</button>
+-          <button data-tab="upload" class="tab">Carga</button>
+-          <button data-tab="documents" class="tab">Documentos</button>
+-          <button data-tab="reviews" class="tab">Revision</button>
+-          <button data-tab="renditions" class="tab">Rendiciones</button>
+-        </nav>
++          <label>API base
++            <input id="apiBaseInput" type="url" value="http://127.0.0.1:8000/api/v1" required />
++          </label>
++          <label>Usuario
++            <input id="loginUser" type="text" autocomplete="username" placeholder="contador@acme.cl" required />
++          </label>
++          <label>Password
++            <input id="loginPassword" type="password" autocomplete="current-password" placeholder="ÔÇóÔÇóÔÇóÔÇóÔÇóÔÇóÔÇóÔÇóÔÇóÔÇóÔÇóÔÇó" />
++          </label>
++          <label>Empresa / tenant fallback
++            <input id="loginTenant" type="text" placeholder="acme" />
++          </label>
+ 
+-        <section class="panel-grid">
+-          <article class="panel card tab-panel" data-panel="dashboard">
+-            <h3>Indicadores</h3>
+-            <div class="kpi-grid" id="kpiGrid"></div>
+-            <h4>Ultimos documentos</h4>
+-            <div id="dashboardDocs"></div>
+-          </article>
+-
+-          <article class="panel card tab-panel hidden" data-panel="upload">
+-            <h3>Carga documental</h3>
+-            <form id="uploadForm" class="stack">
+-              <label>Archivo
+-                <input type="file" id="uploadFile" accept="application/pdf,image/png,image/jpeg" required />
+-              </label>
+-              <label>Responsable
+-                <input type="text" id="uploadResponsible" placeholder="Ana" />
+-              </label>
+-              <label>Periodo (YYYY-MM)
+-                <input type="text" id="uploadPeriod" placeholder="2026-05" />
+-              </label>
+-              <label>Centro de costo
+-                <input type="text" id="uploadCenterCost" placeholder="FINANZAS" />
+-              </label>
+-              <button type="submit">Subir documento</button>
+-            </form>
+-            <pre id="uploadResult" class="mono output"></pre>
+-          </article>
++          <div class="login-actions">
++            <button type="submit" class="btn primary">Entrar</button>
++            <button id="demoLoginBtn" type="button" class="btn ghost">Modo demo</button>
++          </div>
++          <p id="loginMessage" class="form-message" role="status"></p>
++        </form>
++      </section>
+ 
+-          <article class="panel card tab-panel hidden" data-panel="documents">
+-            <h3>Listado y detalle</h3>
+-            <div class="row">
+-              <button id="loadDocumentsBtn" class="secondary">Cargar listado</button>
++      <section id="appScreen" class="app-layout hidden">
++        <aside class="sidebar glass-card">
++          <div class="brand-block">
++            <img class="brand-logo" src="./assets/rendiflow-logo.svg" alt="RendiFlow IA by HACKTECK" />
++          </div>
++              <label>Tipo documento<select id="uploadDocType"><option>Gasto</option><option>Factura</option><option>Boleta</option><option>Internacional</option></select></label>
+             </div>
+-            <div id="documentsList"></div>
+-            <h4>Detalle documento</h4>
+-            <pre id="documentDetail" class="mono output"></pre>
+-          </article>
++            <button type="submit" class="btn primary">Subir cola</button>
++          </form>
++        </article>
++        <article class="panel-card"><div class="panel-heading"><div><p class="eyebrow">Cola</p><h3>Estado por archivo</h3></div></div><div id="uploadQueue" class="queue-list"></div></article>
++      </section>
++    </template>
++
++    <template id="reviewsTemplate">
++      <section class="review-layout">
++        <article class="panel-card review-queue">
++          <div class="panel-heading"><div><p class="eyebrow">Revision inteligente</p><h3>Cola priorizada</h3></div><button id="loadReviewsBtn" class="btn secondary small">Recargar</button></div>
++          <div id="reviewsQueue" class="review-list"></div>
++        </article>
++        <article id="reviewDecisionPanel" class="panel-card decision-panel">
++          <div class="empty-state"><strong>Selecciona un documento</strong><span>Veras motivos, datos extraidos, overrides y acciones de decision.</span></div>
++        </article>
++      </section>
++    </template>
+ 
+-          <article class="panel card tab-panel hidden" data-panel="reviews">
+-            <h3>Bandeja de revision</h3>
+-            <button id="loadReviewsBtn" class="secondary">Cargar pendientes</button>
+-            <div id="reviewsList"></div>
+-            <h4>Accion rapida</h4>
+-            <form id="reviewActionForm" class="stack two-col">
+-              <label>Document ID
+-                <input type="text" id="reviewDocId" required />
+-              </label>
+-              <label>Reviewer
+-                <input type="text" id="reviewerId" value="reviewer-ui" required />
+-              </label>
+-              <label>Decision
+-                <select id="reviewDecision">
+-                  <option value="approve">Approve</option>
+-                  <option value="reject">Reject</option>
+-                </select>
+-              </label>
+-              <label>Motivo
+-                <input type="text" id="reviewReason" value="Validado desde UI" required />
+-              </label>
+-              <button type="submit">Resolver revision</button>
+-            </form>
+-            <pre id="reviewResult" class="mono output"></pre>
+-          </article>
++    <template id="renditionsTemplate">
++      <section class="page-stack">
++        <article class="panel-card">
++          <div class="panel-heading"><div><p class="eyebrow">Rendition Studio</p><h3>Wizard de generacion</h3></div><span class="badge neutral">Plantilla 01-rendicion-gastos-2025</span></div>
++          <ol class="steps"><li class="active">Periodo</li><li>Filtros</li><li>Preview</li><li>Validacion</li><li>Descarga</li></ol>
++          <form id="renditionForm" class="form-grid rendition-form">
++            <label>Periodo<input id="renditionPeriod" type="month" required /></label>
++            <label>Responsable<input id="renditionResponsible" type="text" placeholder="Opcional" /></label>
++            <label>Centro costo<input id="renditionCenterCost" type="text" placeholder="Opcional" /></label>
++            <button type="submit" class="btn primary">Validar y generar</button>
++          </form>
++          <div id="renditionPreview" class="preview-box"></div>
++        </article>
++        <article class="panel-card"><div class="panel-heading"><div><p class="eyebrow">Historial</p><h3>Rendiciones generadas</h3></div></div><div id="renditionsHistory" class="data-table-wrap"></div></article>
++      </section>
++    </template>
++
++    <template id="auditTemplate">
++      <section class="page-stack">
++        <article class="panel-card">
++          <div class="panel-heading"><div><p class="eyebrow">Auditoria</p><h3>Trazabilidad de acciones</h3></div><button id="clearAuditBtn" class="btn ghost small">Limpiar local</button></div>
++          <div id="auditTable" class="data-table-wrap"></div>
++        </article>
++      </section>
++    </template>
++
++    <template id="observabilityTemplate">
++      <section class="page-stack">
++        <article class="panel-card">
++          <div class="panel-heading"><div><p class="eyebrow">Observabilidad</p><h3>Estado productivo</h3></div><button id="runHealthBtn" class="btn secondary">Reintentar checks</button></div>
++          <div id="healthGrid" class="health-grid"></div>
++          <pre id="diagnosticOutput" class="diagnostic-output"></pre>
++        </article>
++      </section>
++    </template>
+ 
+-          <article class="panel card tab-panel hidden" data-panel="renditions">
+-            <h3>Rendiciones e historial</h3>
+-            <form id="renditionForm" class="stack two-col">
+-              <label>Periodo
+-                <input type="text" id="renditionPeriod" placeholder="2026-05" required />
+-              </label>
+-              <label>Responsable
+-                <input type="text" id="renditionResponsible" placeholder="Ana" />
+-              </label>
+-              <label>Centro de costo
+-                <input type="text" id="renditionCenterCost" placeholder="FINANZAS" />
+-              </label>
+-              <button type="submit">Generar por filtro</button>
+-            </form>
+-            <div id="renditionsHistory"></div>
+-            <pre id="renditionResult" class="mono output"></pre>
+-          </article>
+-        </section>
++    <template id="settingsTemplate">
++      <section class="settings-layout">
++        <article class="panel-card settings-nav"><button class="settings-tab active">Empresas</button><button class="settings-tab">Usuarios</button><button class="settings-tab">Roles</button><button class="settings-tab">Reglas contables</button><button class="settings-tab">Plantillas XLSX</button></article>
++        <article class="panel-card"><div class="panel-heading"><div><p class="eyebrow">Configuracion</p><h3>Parametros operativos</h3></div></div><div id="settingsContent" class="settings-content"></div></article>
+       </section>
+-    </main>
++    </template>
+ 
+     <script type="module" src="./app.js"></script>
+   </body>
